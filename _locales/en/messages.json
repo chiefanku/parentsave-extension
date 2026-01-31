@@ -1,0 +1,66 @@
+{
+  "extensionName": {
+    "message": "ParentSave - Family Savings",
+    "description": "The name of the extension"
+  },
+  "extensionDescription": {
+    "message": "Smart coupons, price tracking, and safety alerts for parents",
+    "description": "The description of the extension"
+  },
+  "recallAlertTitle": {
+    "message": "RECALL ALERT",
+    "description": "Title for recall warning banners"
+  },
+  "priceDropTitle": {
+    "message": "Price Drop Alert!",
+    "description": "Title for price drop notifications"
+  },
+  "sizeBadgePrefix": {
+    "message": "Your child fits:",
+    "description": "Prefix text for size recommendation badges"
+  },
+  "inSixMonths": {
+    "message": "In 6 months:",
+    "description": "Label for future size prediction"
+  },
+  "couponsFound": {
+    "message": "ParentSave found $1 coupons!",
+    "description": "Message showing number of coupons found",
+    "placeholders": {
+      "1": {
+        "content": "$1",
+        "example": "5"
+      }
+    }
+  },
+  "savedAmount": {
+    "message": "You saved $1!",
+    "description": "Message showing amount saved",
+    "placeholders": {
+      "1": {
+        "content": "$1",
+        "example": "$12.50"
+      }
+    }
+  },
+  "applyBestCoupon": {
+    "message": "Apply Best Coupon",
+    "description": "Button text to apply the best coupon"
+  },
+  "childProfile": {
+    "message": "Child Profile",
+    "description": "Header for child profile section"
+  },
+  "addChild": {
+    "message": "Add Child",
+    "description": "Button text to add a new child profile"
+  },
+  "settings": {
+    "message": "Settings",
+    "description": "Settings menu item"
+  },
+  "viewDetails": {
+    "message": "View Details",
+    "description": "Link text to view more details"
+  }
+}

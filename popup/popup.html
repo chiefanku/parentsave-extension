@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ParentSave</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="popup-container">
+    <!-- Header -->
+    <header class="popup-header">
+      <div class="logo-section">
+        <img src="../icons/icon48.png" alt="ParentSave" class="logo">
+        <div class="brand">
+          <h1>ParentSave</h1>
+          <span class="tagline">Family Savings</span>
+        </div>
+      </div>
+      <button id="settings-btn" class="icon-btn" aria-label="Settings">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="12" cy="12" r="3"></circle>
+          <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path>
+        </svg>
+      </button>
+    </header>
+
+    <!-- Main Content -->
+    <main class="popup-main">
+      <!-- Child Profiles Section -->
+      <section class="section">
+        <div class="section-header">
+          <h2>Child Profiles</h2>
+          <button id="add-child-btn" class="add-btn">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="12" y1="5" x2="12" y2="19"></line>
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+            </svg>
+            Add Child
+          </button>
+        </div>
+        <div id="profiles-list" class="profiles-list">
+          <p class="empty-state">No child profiles yet. Add one to get personalized size recommendations!</p>
+        </div>
+      </section>
+
+      <!-- Quick Stats -->
+      <section class="section stats-section">
+        <h2>Your Savings</h2>
+        <div class="stats-grid">
+          <div class="stat-card">
+            <span class="stat-value" id="total-savings">$0.00</span>
+            <span class="stat-label">Total Saved</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-value" id="coupons-applied">0</span>
+            <span class="stat-label">Coupons Applied</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-value" id="items-tracked">0</span>
+            <span class="stat-label">Items Tracked</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Recent Alerts -->
+      <section class="section">
+        <h2>Recent Alerts</h2>
+        <div id="alerts-list" class="alerts-list">
+          <p class="empty-state">No recent alerts</p>
+        </div>
+      </section>
+    </main>
+
+    <!-- Add Child Modal -->
+    <div id="add-child-modal" class="modal hidden">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3>Add Child Profile</h3>
+          <button class="modal-close" aria-label="Close">&times;</button>
+        </div>
+        <form id="add-child-form">
+          <div class="form-group">
+            <label for="child-name">Name</label>
+            <input type="text" id="child-name" name="name" required placeholder="Emma">
+          </div>
+          <div class="form-group">
+            <label for="child-birthdate">Birth Date</label>
+            <input type="date" id="child-birthdate" name="birthDate" required>
+          </div>
+          <div class="form-group">
+            <label for="child-gender">Gender</label>
+            <select id="child-gender" name="gender">
+              <option value="female">Female</option>
+              <option value="male">Male</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="child-height">Height</label>
+              <div class="input-group">
+                <input type="number" id="child-height" name="height" step="0.1" placeholder="28">
+                <select id="child-height-unit" name="heightUnit">
+                  <option value="inches">in</option>
+                  <option value="cm">cm</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="child-weight">Weight</label>
+              <div class="input-group">
+                <input type="number" id="child-weight" name="weight" step="0.1" placeholder="22">
+                <select id="child-weight-unit" name="weightUnit">
+                  <option value="lbs">lbs</option>
+                  <option value="kg">kg</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <div class="form-actions">
+            <button type="button" class="btn btn-secondary" id="cancel-add">Cancel</button>
+            <button type="submit" class="btn btn-primary">Save Profile</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>

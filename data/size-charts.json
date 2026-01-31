@@ -1,0 +1,124 @@
+{
+  "carters": {
+    "brand": "Carter's",
+    "sizes": [
+      { "label": "Preemie", "heightMin": 40, "heightMax": 45, "weightMin": 1.8, "weightMax": 2.7 },
+      { "label": "Newborn", "heightMin": 45, "heightMax": 55, "weightMin": 2.3, "weightMax": 4.1 },
+      { "label": "3M", "heightMin": 55, "heightMax": 61, "weightMin": 3.6, "weightMax": 5.9 },
+      { "label": "6M", "heightMin": 61, "heightMax": 67, "weightMin": 5.4, "weightMax": 7.7 },
+      { "label": "9M", "heightMin": 67, "heightMax": 72, "weightMin": 7.3, "weightMax": 9.5 },
+      { "label": "12M", "heightMin": 72, "heightMax": 77, "weightMin": 9.1, "weightMax": 11.3 },
+      { "label": "18M", "heightMin": 77, "heightMax": 82, "weightMin": 10.4, "weightMax": 12.2 },
+      { "label": "24M", "heightMin": 82, "heightMax": 87, "weightMin": 11.3, "weightMax": 13.6 },
+      { "label": "2T", "heightMin": 84, "heightMax": 89, "weightMin": 11.8, "weightMax": 14.1 },
+      { "label": "3T", "heightMin": 89, "heightMax": 97, "weightMin": 13.2, "weightMax": 15.4 },
+      { "label": "4T", "heightMin": 97, "heightMax": 105, "weightMin": 14.5, "weightMax": 17.2 },
+      { "label": "5T", "heightMin": 105, "heightMax": 112, "weightMin": 16.3, "weightMax": 19.1 }
+    ]
+  },
+  "gerber": {
+    "brand": "Gerber",
+    "sizes": [
+      { "label": "Newborn", "heightMin": 45, "heightMax": 53, "weightMin": 2.5, "weightMax": 3.6 },
+      { "label": "0-3M", "heightMin": 53, "heightMax": 61, "weightMin": 3.2, "weightMax": 5.4 },
+      { "label": "3-6M", "heightMin": 61, "heightMax": 67, "weightMin": 5.4, "weightMax": 7.7 },
+      { "label": "6-9M", "heightMin": 67, "heightMax": 72, "weightMin": 7.3, "weightMax": 9.1 },
+      { "label": "9-12M", "heightMin": 72, "heightMax": 77, "weightMin": 9.1, "weightMax": 10.9 },
+      { "label": "12-18M", "heightMin": 77, "heightMax": 82, "weightMin": 10, "weightMax": 12.2 },
+      { "label": "18-24M", "heightMin": 82, "heightMax": 89, "weightMin": 11.3, "weightMax": 13.6 },
+      { "label": "2T", "heightMin": 86, "heightMax": 92, "weightMin": 12.2, "weightMax": 14.5 },
+      { "label": "3T", "heightMin": 92, "heightMax": 99, "weightMin": 13.6, "weightMax": 16.3 },
+      { "label": "4T", "heightMin": 99, "heightMax": 107, "weightMin": 15.4, "weightMax": 18.1 },
+      { "label": "5T", "heightMin": 107, "heightMax": 114, "weightMin": 17.2, "weightMax": 20.4 }
+    ]
+  },
+  "primary": {
+    "brand": "Primary.com",
+    "sizes": [
+      { "label": "0-3M", "heightMin": 53, "heightMax": 61, "weightMin": 3.6, "weightMax": 5.9 },
+      { "label": "3-6M", "heightMin": 61, "heightMax": 67, "weightMin": 5.4, "weightMax": 7.7 },
+      { "label": "6-12M", "heightMin": 67, "heightMax": 77, "weightMin": 7.3, "weightMax": 10.9 },
+      { "label": "12-18M", "heightMin": 77, "heightMax": 82, "weightMin": 9.5, "weightMax": 12.2 },
+      { "label": "18-24M", "heightMin": 82, "heightMax": 89, "weightMin": 10.9, "weightMax": 13.6 },
+      { "label": "2-3", "heightMin": 89, "heightMax": 99, "weightMin": 13.2, "weightMax": 15.9 },
+      { "label": "4-5", "heightMin": 99, "heightMax": 112, "weightMin": 15.4, "weightMax": 19.5 },
+      { "label": "6-7", "heightMin": 112, "heightMax": 127, "weightMin": 19.1, "weightMax": 24.9 }
+    ]
+  },
+  "hanna": {
+    "brand": "Hanna Andersson",
+    "sizes": [
+      { "label": "50", "heightMin": 45, "heightMax": 50, "weightMin": 2.3, "weightMax": 3.6 },
+      { "label": "60", "heightMin": 50, "heightMax": 60, "weightMin": 3.2, "weightMax": 5.4 },
+      { "label": "70", "heightMin": 60, "heightMax": 70, "weightMin": 5, "weightMax": 8.2 },
+      { "label": "75", "heightMin": 70, "heightMax": 75, "weightMin": 7.7, "weightMax": 10 },
+      { "label": "80", "heightMin": 75, "heightMax": 80, "weightMin": 9.1, "weightMax": 11.3 },
+      { "label": "85", "heightMin": 80, "heightMax": 85, "weightMin": 10, "weightMax": 12.7 },
+      { "label": "90", "heightMin": 85, "heightMax": 90, "weightMin": 11.3, "weightMax": 14.1 },
+      { "label": "100", "heightMin": 90, "heightMax": 100, "weightMin": 13.2, "weightMax": 16.8 },
+      { "label": "110", "heightMin": 100, "heightMax": 110, "weightMin": 15.4, "weightMax": 19.5 },
+      { "label": "120", "heightMin": 110, "heightMax": 120, "weightMin": 18.1, "weightMax": 23.1 }
+    ]
+  },
+  "oshkosh": {
+    "brand": "OshKosh B'gosh",
+    "sizes": [
+      { "label": "Newborn", "heightMin": 45, "heightMax": 55, "weightMin": 2.3, "weightMax": 4.1 },
+      { "label": "3M", "heightMin": 55, "heightMax": 61, "weightMin": 3.6, "weightMax": 5.9 },
+      { "label": "6M", "heightMin": 61, "heightMax": 67, "weightMin": 5.4, "weightMax": 7.7 },
+      { "label": "9M", "heightMin": 67, "heightMax": 72, "weightMin": 7.3, "weightMax": 9.5 },
+      { "label": "12M", "heightMin": 72, "heightMax": 77, "weightMin": 9.1, "weightMax": 11.3 },
+      { "label": "18M", "heightMin": 77, "heightMax": 82, "weightMin": 10.4, "weightMax": 12.2 },
+      { "label": "24M", "heightMin": 82, "heightMax": 87, "weightMin": 11.3, "weightMax": 13.6 },
+      { "label": "2T", "heightMin": 84, "heightMax": 89, "weightMin": 11.8, "weightMax": 14.1 },
+      { "label": "3T", "heightMin": 89, "heightMax": 97, "weightMin": 13.2, "weightMax": 15.4 },
+      { "label": "4T", "heightMin": 97, "heightMax": 105, "weightMin": 14.5, "weightMax": 17.2 },
+      { "label": "5T", "heightMin": 105, "heightMax": 112, "weightMin": 16.3, "weightMax": 19.1 }
+    ]
+  },
+  "gap": {
+    "brand": "Gap Kids",
+    "sizes": [
+      { "label": "0-3M", "heightMin": 53, "heightMax": 61, "weightMin": 3.6, "weightMax": 5.9 },
+      { "label": "3-6M", "heightMin": 61, "heightMax": 67, "weightMin": 5.4, "weightMax": 7.7 },
+      { "label": "6-12M", "heightMin": 67, "heightMax": 77, "weightMin": 7.3, "weightMax": 10.9 },
+      { "label": "12-18M", "heightMin": 77, "heightMax": 82, "weightMin": 9.5, "weightMax": 12.2 },
+      { "label": "18-24M", "heightMin": 82, "heightMax": 89, "weightMin": 10.9, "weightMax": 13.6 },
+      { "label": "2T", "heightMin": 86, "heightMax": 92, "weightMin": 12.2, "weightMax": 14.5 },
+      { "label": "3T", "heightMin": 92, "heightMax": 99, "weightMin": 13.6, "weightMax": 16.3 },
+      { "label": "4T", "heightMin": 99, "heightMax": 107, "weightMin": 15.4, "weightMax": 18.1 },
+      { "label": "5T", "heightMin": 107, "heightMax": 114, "weightMin": 17.2, "weightMax": 20.4 }
+    ]
+  },
+  "oldnavy": {
+    "brand": "Old Navy",
+    "sizes": [
+      { "label": "0-3M", "heightMin": 53, "heightMax": 61, "weightMin": 3.6, "weightMax": 5.9 },
+      { "label": "3-6M", "heightMin": 61, "heightMax": 67, "weightMin": 5.4, "weightMax": 7.7 },
+      { "label": "6-12M", "heightMin": 67, "heightMax": 77, "weightMin": 7.3, "weightMax": 10.9 },
+      { "label": "12-18M", "heightMin": 77, "heightMax": 82, "weightMin": 9.5, "weightMax": 12.2 },
+      { "label": "18-24M", "heightMin": 82, "heightMax": 89, "weightMin": 10.9, "weightMax": 13.6 },
+      { "label": "2T", "heightMin": 86, "heightMax": 92, "weightMin": 12.2, "weightMax": 14.5 },
+      { "label": "3T", "heightMin": 92, "heightMax": 99, "weightMin": 13.6, "weightMax": 16.3 },
+      { "label": "4T", "heightMin": 99, "heightMax": 107, "weightMin": 15.4, "weightMax": 18.1 },
+      { "label": "5T", "heightMin": 107, "heightMax": 114, "weightMin": 17.2, "weightMax": 20.4 }
+    ]
+  },
+  "catandjack": {
+    "brand": "Cat & Jack (Target)",
+    "sizes": [
+      { "label": "Newborn", "heightMin": 45, "heightMax": 55, "weightMin": 2.3, "weightMax": 4.5 },
+      { "label": "0-3M", "heightMin": 55, "heightMax": 61, "weightMin": 3.6, "weightMax": 5.9 },
+      { "label": "3-6M", "heightMin": 61, "heightMax": 67, "weightMin": 5.4, "weightMax": 7.7 },
+      { "label": "6-9M", "heightMin": 67, "heightMax": 72, "weightMin": 7.3, "weightMax": 9.5 },
+      { "label": "9-12M", "heightMin": 72, "heightMax": 77, "weightMin": 9.1, "weightMax": 11.3 },
+      { "label": "12M", "heightMin": 72, "heightMax": 77, "weightMin": 9.1, "weightMax": 11.3 },
+      { "label": "18M", "heightMin": 77, "heightMax": 82, "weightMin": 10.4, "weightMax": 12.7 },
+      { "label": "24M", "heightMin": 82, "heightMax": 87, "weightMin": 11.8, "weightMax": 14.1 },
+      { "label": "2T", "heightMin": 84, "heightMax": 89, "weightMin": 12.2, "weightMax": 14.5 },
+      { "label": "3T", "heightMin": 89, "heightMax": 97, "weightMin": 13.6, "weightMax": 15.9 },
+      { "label": "4T", "heightMin": 97, "heightMax": 105, "weightMin": 15.4, "weightMax": 17.7 },
+      { "label": "5T", "heightMin": 105, "heightMax": 112, "weightMin": 17.2, "weightMax": 20 }
+    ]
+  }
+}

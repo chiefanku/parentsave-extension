@@ -1,0 +1,109 @@
+{
+  "lastUpdated": "2026-01-15T00:00:00Z",
+  "recalls": [
+    {
+      "id": "recall-2025-001",
+      "recallId": "25-001",
+      "title": "Infant Sleep Positioners Recalled Due to Suffocation Hazard",
+      "description": "Recalled due to risk of suffocation. The sleep positioners can cause babies to roll into an unsafe position.",
+      "hazard": "Suffocation risk if infant rolls onto side or stomach",
+      "remedy": "Consumers should stop using the product immediately and contact the company for a full refund.",
+      "recallDate": "2025-01-10",
+      "manufacturer": "Baby Sleep Co.",
+      "products": "Infant Sleep Positioner, Model BSP-100",
+      "upcs": ["123456789012"],
+      "url": "https://www.cpsc.gov/Recalls/25-001"
+    },
+    {
+      "id": "recall-2025-002",
+      "recallId": "25-002",
+      "title": "Children's Hooded Sweatshirts Recalled Due to Strangulation Hazard",
+      "description": "The drawstrings on children's upper outerwear can get caught on playground equipment and other objects, posing strangulation hazards.",
+      "hazard": "Strangulation hazard from drawstrings",
+      "remedy": "Consumers should remove the drawstrings from the hooded sweatshirts immediately.",
+      "recallDate": "2025-01-05",
+      "manufacturer": "Kids Fashion Inc.",
+      "products": "Boys' and Girls' Hooded Sweatshirts with Drawstrings",
+      "upcs": ["234567890123", "234567890124"],
+      "url": "https://www.cpsc.gov/Recalls/25-002"
+    },
+    {
+      "id": "recall-2024-050",
+      "recallId": "24-050",
+      "title": "Infant Bath Seats Recalled Due to Drowning Hazard",
+      "description": "The suction cups can release unexpectedly, causing the bath seat to tip over, posing a drowning hazard to infants.",
+      "hazard": "Drowning hazard if suction cups release",
+      "remedy": "Consumers should immediately stop using the recalled bath seats and contact the firm for a full refund.",
+      "recallDate": "2024-11-15",
+      "manufacturer": "BathTime Baby LLC",
+      "products": "Infant Bath Seat, Model BTB-200",
+      "upcs": ["345678901234"],
+      "url": "https://www.cpsc.gov/Recalls/24-050"
+    },
+    {
+      "id": "recall-2024-045",
+      "recallId": "24-045",
+      "title": "Wooden Teething Toys Recalled Due to Choking Hazard",
+      "description": "The wooden beads can detach from the teething toys, posing a choking hazard to infants and toddlers.",
+      "hazard": "Choking hazard from small parts",
+      "remedy": "Consumers should immediately take the recalled teething toys away from children and contact the company for a refund.",
+      "recallDate": "2024-10-20",
+      "manufacturer": "Natural Baby Toys Co.",
+      "products": "Wooden Teething Rings and Rattles",
+      "upcs": ["456789012345", "456789012346"],
+      "url": "https://www.cpsc.gov/Recalls/24-045"
+    },
+    {
+      "id": "recall-2024-040",
+      "recallId": "24-040",
+      "title": "Infant Swings Recalled Due to Fall Hazard",
+      "description": "The swing seat can detach from the base, posing a fall hazard to infants.",
+      "hazard": "Fall hazard if seat detaches",
+      "remedy": "Consumers should immediately stop using the recalled swings and contact the company for a free repair kit.",
+      "recallDate": "2024-09-15",
+      "manufacturer": "SwingTime Baby Products",
+      "products": "Portable Infant Swing, Model PIS-300",
+      "upcs": ["567890123456"],
+      "url": "https://www.cpsc.gov/Recalls/24-040"
+    },
+    {
+      "id": "recall-2024-035",
+      "recallId": "24-035",
+      "title": "Crib Mattresses Recalled Due to Suffocation Hazard",
+      "description": "The mattresses are smaller than the cribs in which they are sold, creating a gap that poses a suffocation hazard.",
+      "hazard": "Suffocation hazard due to gaps between mattress and crib",
+      "remedy": "Consumers should immediately stop using the recalled mattresses and contact the company for a full refund.",
+      "recallDate": "2024-08-10",
+      "manufacturer": "Baby Comfort Inc.",
+      "products": "Crib Mattress, Model CM-400",
+      "upcs": ["678901234567"],
+      "url": "https://www.cpsc.gov/Recalls/24-035"
+    },
+    {
+      "id": "recall-2024-030",
+      "recallId": "24-030",
+      "title": "High Chairs Recalled Due to Fall Hazard",
+      "description": "The restraint buckles can break, allowing the child to fall from the high chair.",
+      "hazard": "Fall hazard if restraint buckle breaks",
+      "remedy": "Consumers should immediately stop using the high chair and contact the company for a free replacement buckle.",
+      "recallDate": "2024-07-25",
+      "manufacturer": "MealTime Baby Co.",
+      "products": "Convertible High Chair, Model CHC-500",
+      "upcs": ["789012345678"],
+      "url": "https://www.cpsc.gov/Recalls/24-030"
+    },
+    {
+      "id": "recall-2024-025",
+      "recallId": "24-025",
+      "title": "Stroller Recalled Due to Fingertip Amputation Hazard",
+      "description": "Children's fingertips can become caught in the stroller's hinges when unfolding, posing a fingertip amputation hazard.",
+      "hazard": "Fingertip amputation hazard from hinges",
+      "remedy": "Consumers should immediately stop using the stroller and contact the company for a free repair kit.",
+      "recallDate": "2024-06-20",
+      "manufacturer": "StrollAlong Baby Gear",
+      "products": "Lightweight Umbrella Stroller, Model LUS-600",
+      "upcs": ["890123456789"],
+      "url": "https://www.cpsc.gov/Recalls/24-025"
+    }
+  ]
+}

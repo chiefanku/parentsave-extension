@@ -1,0 +1,472 @@
+/**
+ * ParentSave Content Styles
+ * All classes prefixed with 'parentsave-' to avoid conflicts
+ */
+
+/* ============================================
+   RECALL WARNING BANNER
+   ============================================ */
+
+.parentsave-recall-warning {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999999;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 16px 24px;
+  background: linear-gradient(135deg, #FEE2E2 0%, #FECACA 100%);
+  border-bottom: 3px solid #DC2626;
+  box-shadow: 0 4px 12px rgba(220, 38, 38, 0.2);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  animation: parentsave-slide-down 0.3s ease-out;
+}
+
+@keyframes parentsave-slide-down {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.parentsave-warning-icon {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  background: #DC2626;
+  border-radius: 50%;
+}
+
+.parentsave-warning-icon svg {
+  width: 28px;
+  height: 28px;
+}
+
+.parentsave-warning-icon svg path {
+  stroke: white;
+}
+
+.parentsave-warning-content {
+  flex: 1;
+}
+
+.parentsave-warning-title {
+  display: block;
+  font-size: 18px;
+  font-weight: 700;
+  color: #991B1B;
+  margin-bottom: 4px;
+}
+
+.parentsave-warning-description {
+  margin: 0 0 8px 0;
+  font-size: 14px;
+  color: #7F1D1D;
+  line-height: 1.4;
+}
+
+.parentsave-warning-link {
+  display: inline-block;
+  padding: 6px 12px;
+  background: #DC2626;
+  color: white !important;
+  text-decoration: none;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 600;
+  transition: background 0.2s;
+}
+
+.parentsave-warning-link:hover {
+  background: #B91C1C;
+}
+
+.parentsave-warning-close {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  background: transparent;
+  border: none;
+  border-radius: 6px;
+  font-size: 24px;
+  color: #991B1B;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.parentsave-warning-close:hover {
+  background: rgba(220, 38, 38, 0.1);
+}
+
+/* ============================================
+   SIZE RECOMMENDATION BADGE
+   ============================================ */
+
+.parentsave-size-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 14px;
+  margin: 8px 0;
+  background: linear-gradient(135deg, #EEF2FF 0%, #E0E7FF 100%);
+  border: 2px solid #6366F1;
+  border-radius: 10px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  box-shadow: 0 2px 8px rgba(99, 102, 241, 0.15);
+  animation: parentsave-fade-in 0.3s ease-out;
+}
+
+@keyframes parentsave-fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.parentsave-badge-icon {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.parentsave-badge-text {
+  font-size: 14px;
+  color: #3730A3;
+}
+
+.parentsave-badge-text strong {
+  font-size: 16px;
+  color: #4338CA;
+}
+
+.parentsave-size-future {
+  display: block;
+  font-size: 12px;
+  color: #6366F1;
+  margin-top: 2px;
+}
+
+/* ============================================
+   COUPON POPUP
+   ============================================ */
+
+.parentsave-coupon-popup {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 999998;
+  width: 320px;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  overflow: hidden;
+  animation: parentsave-slide-up 0.4s ease-out;
+}
+
+@keyframes parentsave-slide-up {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.parentsave-popup-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px;
+  background: linear-gradient(135deg, #6366F1 0%, #4F46E5 100%);
+  color: white;
+}
+
+.parentsave-popup-logo {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+}
+
+.parentsave-popup-title {
+  flex: 1;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.parentsave-popup-close {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  background: rgba(255, 255, 255, 0.2);
+  border: none;
+  border-radius: 6px;
+  font-size: 18px;
+  color: white;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.parentsave-popup-close:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.parentsave-popup-result {
+  padding: 12px 16px;
+  background: #F0FDF4;
+  border-bottom: 1px solid #E5E7EB;
+}
+
+.parentsave-savings {
+  font-size: 18px;
+  font-weight: 700;
+  color: #059669;
+}
+
+.parentsave-coupon-list {
+  padding: 12px 16px;
+}
+
+.parentsave-coupon-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 0;
+  border-bottom: 1px solid #F3F4F6;
+}
+
+.parentsave-coupon-item:last-child {
+  border-bottom: none;
+}
+
+.parentsave-coupon-code {
+  display: inline-block;
+  padding: 4px 10px;
+  background: #F3F4F6;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 600;
+  font-family: 'Monaco', 'Menlo', monospace;
+  color: #374151;
+}
+
+.parentsave-coupon-desc {
+  flex: 1;
+  font-size: 13px;
+  color: #6B7280;
+}
+
+.parentsave-apply-btn {
+  display: block;
+  width: calc(100% - 32px);
+  margin: 16px;
+  padding: 12px;
+  background: linear-gradient(135deg, #10B981 0%, #059669 100%);
+  border: none;
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: 600;
+  color: white;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.parentsave-apply-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(16, 185, 129, 0.4);
+}
+
+.parentsave-apply-btn:active {
+  transform: translateY(0);
+}
+
+/* ============================================
+   REGISTRY IMPORT BUTTON
+   ============================================ */
+
+.parentsave-import-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 20px;
+  margin: 16px 0;
+  background: linear-gradient(135deg, #6366F1 0%, #4F46E5 100%);
+  border: none;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 600;
+  color: white;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.parentsave-import-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(99, 102, 241, 0.4);
+}
+
+/* ============================================
+   NOTIFICATIONS
+   ============================================ */
+
+.parentsave-notification {
+  position: fixed;
+  top: 24px;
+  right: 24px;
+  z-index: 999999;
+  padding: 14px 20px;
+  border-radius: 10px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  animation: parentsave-notification-in 0.3s ease-out;
+}
+
+@keyframes parentsave-notification-in {
+  from {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.parentsave-notification-fade {
+  opacity: 0;
+  transform: translateX(20px);
+  transition: opacity 0.3s, transform 0.3s;
+}
+
+.parentsave-notification-success {
+  background: #ECFDF5;
+  border: 1px solid #10B981;
+  color: #059669;
+}
+
+.parentsave-notification-error {
+  background: #FEF2F2;
+  border: 1px solid #EF4444;
+  color: #DC2626;
+}
+
+.parentsave-notification-info {
+  background: #EFF6FF;
+  border: 1px solid #3B82F6;
+  color: #2563EB;
+}
+
+/* ============================================
+   DARK MODE SUPPORT
+   ============================================ */
+
+@media (prefers-color-scheme: dark) {
+  .parentsave-recall-warning {
+    background: linear-gradient(135deg, #450A0A 0%, #7F1D1D 100%);
+  }
+
+  .parentsave-warning-title {
+    color: #FCA5A5;
+  }
+
+  .parentsave-warning-description {
+    color: #FECACA;
+  }
+
+  .parentsave-size-badge {
+    background: linear-gradient(135deg, #312E81 0%, #3730A3 100%);
+    border-color: #818CF8;
+  }
+
+  .parentsave-badge-text {
+    color: #C7D2FE;
+  }
+
+  .parentsave-badge-text strong {
+    color: #A5B4FC;
+  }
+
+  .parentsave-coupon-popup {
+    background: #1F2937;
+  }
+
+  .parentsave-popup-result {
+    background: #064E3B;
+  }
+
+  .parentsave-savings {
+    color: #34D399;
+  }
+
+  .parentsave-coupon-item {
+    border-color: #374151;
+  }
+
+  .parentsave-coupon-code {
+    background: #374151;
+    color: #E5E7EB;
+  }
+
+  .parentsave-coupon-desc {
+    color: #9CA3AF;
+  }
+}
+
+/* ============================================
+   RESPONSIVE ADJUSTMENTS
+   ============================================ */
+
+@media (max-width: 480px) {
+  .parentsave-recall-warning {
+    flex-wrap: wrap;
+    padding: 12px 16px;
+  }
+
+  .parentsave-warning-icon {
+    width: 40px;
+    height: 40px;
+  }
+
+  .parentsave-coupon-popup {
+    left: 16px;
+    right: 16px;
+    bottom: 16px;
+    width: auto;
+  }
+}
+
+/* ============================================
+   PRINT STYLES
+   ============================================ */
+
+@media print {
+  .parentsave-recall-warning,
+  .parentsave-coupon-popup,
+  .parentsave-notification,
+  .parentsave-import-btn {
+    display: none !important;
+  }
+}

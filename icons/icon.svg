@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#6366F1"/>
+      <stop offset="100%" style="stop-color:#4F46E5"/>
+    </linearGradient>
+  </defs>
+  <!-- Background -->
+  <rect width="128" height="128" rx="28" fill="url(#bg)"/>
+  <!-- Heart shape representing parent love -->
+  <path d="M64 100 C40 80, 25 60, 35 45 C42 35, 54 35, 64 48 C74 35, 86 35, 93 45 C103 60, 88 80, 64 100Z" fill="white" opacity="0.95"/>
+  <!-- Dollar sign representing savings -->
+  <text x="64" y="78" text-anchor="middle" font-family="Arial, sans-serif" font-size="32" font-weight="bold" fill="#4F46E5">$</text>
+  <!-- Small shield for safety -->
+  <path d="M64 22 L50 28 L50 38 C50 46, 56 52, 64 56 C72 52, 78 46, 78 38 L78 28 Z" fill="white" opacity="0.9"/>
+  <path d="M60 38 L62 40 L68 34" stroke="#10B981" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+</svg>

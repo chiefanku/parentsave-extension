@@ -1,0 +1,178 @@
+{
+  "amazon": {
+    "id": "amazon",
+    "name": "Amazon",
+    "domains": ["amazon.com", "smile.amazon.com"],
+    "category": "general",
+    "parentFriendly": true,
+    "selectors": {
+      "productTitle": "#productTitle",
+      "price": ".a-price .a-offscreen",
+      "couponInput": "#spc-gcpromoinput",
+      "applyButton": "#gcApplyButtonId",
+      "cartTotal": "#sc-subtotal-amount-activecart"
+    },
+    "affiliateNetwork": "amazon-associates",
+    "affiliateTag": "parentsave-20",
+    "commissionRate": 4,
+    "supportsRegistry": true,
+    "registryUrl": "/baby-reg/"
+  },
+  "target": {
+    "id": "target",
+    "name": "Target",
+    "domains": ["target.com"],
+    "category": "general",
+    "parentFriendly": true,
+    "selectors": {
+      "productTitle": "[data-test=\"product-title\"]",
+      "price": "[data-test=\"product-price\"]",
+      "couponInput": "input[name=\"promocode\"]",
+      "applyButton": "[data-test=\"apply-button\"]",
+      "cartTotal": "[data-test=\"cart-summary-total\"]"
+    },
+    "affiliateNetwork": "impact",
+    "commissionRate": 3,
+    "supportsRegistry": true,
+    "registryUrl": "/gift-registry/"
+  },
+  "walmart": {
+    "id": "walmart",
+    "name": "Walmart",
+    "domains": ["walmart.com"],
+    "category": "general",
+    "parentFriendly": true,
+    "selectors": {
+      "productTitle": "[data-automation=\"product-title\"]",
+      "price": "[data-automation=\"buybox-price\"]",
+      "couponInput": "input[name=\"promoCode\"]",
+      "applyButton": "[data-automation=\"apply-button\"]",
+      "cartTotal": "[data-automation=\"order-total\"]"
+    },
+    "affiliateNetwork": "impact",
+    "commissionRate": 4,
+    "supportsRegistry": true,
+    "registryUrl": "/registry/"
+  },
+  "carters": {
+    "id": "carters",
+    "name": "Carter's",
+    "domains": ["carters.com"],
+    "category": "baby-clothing",
+    "parentFriendly": true,
+    "selectors": {
+      "productTitle": ".product-name h1",
+      "price": ".price-sales",
+      "couponInput": "input[name=\"couponCode\"]",
+      "applyButton": ".promo-code-apply",
+      "cartTotal": ".order-total .order-value"
+    },
+    "affiliateNetwork": "shareasale",
+    "commissionRate": 8,
+    "supportsRegistry": false
+  },
+  "oshkosh": {
+    "id": "oshkosh",
+    "name": "OshKosh B'gosh",
+    "domains": ["oshkosh.com"],
+    "category": "baby-clothing",
+    "parentFriendly": true,
+    "selectors": {
+      "productTitle": ".product-name h1",
+      "price": ".price-sales",
+      "couponInput": "input[name=\"couponCode\"]",
+      "applyButton": ".promo-code-apply",
+      "cartTotal": ".order-total .order-value"
+    },
+    "affiliateNetwork": "shareasale",
+    "commissionRate": 8,
+    "supportsRegistry": false
+  },
+  "buybuybaby": {
+    "id": "buybuybaby",
+    "name": "Buy Buy Baby",
+    "domains": ["buybuybaby.com"],
+    "category": "baby-specialty",
+    "parentFriendly": true,
+    "selectors": {
+      "productTitle": ".product-name h1",
+      "price": ".product-price",
+      "couponInput": "input[name=\"promoCode\"]",
+      "applyButton": ".apply-promo-btn",
+      "cartTotal": ".order-total"
+    },
+    "affiliateNetwork": "cj",
+    "commissionRate": 5,
+    "supportsRegistry": true,
+    "registryUrl": "/store/registry/"
+  },
+  "babylist": {
+    "id": "babylist",
+    "name": "Babylist",
+    "domains": ["babylist.com"],
+    "category": "baby-registry",
+    "parentFriendly": true,
+    "selectors": {
+      "productTitle": ".product-title",
+      "price": ".product-price",
+      "couponInput": "input[name=\"coupon\"]",
+      "applyButton": ".apply-coupon",
+      "cartTotal": ".cart-total"
+    },
+    "affiliateNetwork": "impact",
+    "commissionRate": 6,
+    "supportsRegistry": true,
+    "registryUrl": "/list/"
+  },
+  "gerber": {
+    "id": "gerber",
+    "name": "Gerber Childrenswear",
+    "domains": ["gerberchildrenswear.com"],
+    "category": "baby-clothing",
+    "parentFriendly": true,
+    "selectors": {
+      "productTitle": ".product-name",
+      "price": ".product-price",
+      "couponInput": "input[name=\"coupon\"]",
+      "applyButton": ".apply-coupon-btn",
+      "cartTotal": ".cart-total"
+    },
+    "affiliateNetwork": "shareasale",
+    "commissionRate": 10,
+    "supportsRegistry": false
+  },
+  "primary": {
+    "id": "primary",
+    "name": "Primary.com",
+    "domains": ["primary.com"],
+    "category": "baby-clothing",
+    "parentFriendly": true,
+    "selectors": {
+      "productTitle": "h1.product-title",
+      "price": ".product-price",
+      "couponInput": "input[name=\"discount\"]",
+      "applyButton": ".apply-discount",
+      "cartTotal": ".order-total"
+    },
+    "affiliateNetwork": "shareasale",
+    "commissionRate": 8,
+    "supportsRegistry": false
+  },
+  "hanna": {
+    "id": "hanna",
+    "name": "Hanna Andersson",
+    "domains": ["hannaandersson.com"],
+    "category": "baby-clothing",
+    "parentFriendly": true,
+    "selectors": {
+      "productTitle": ".product-name",
+      "price": ".product-price",
+      "couponInput": "input[name=\"promoCode\"]",
+      "applyButton": ".apply-promo",
+      "cartTotal": ".order-total"
+    },
+    "affiliateNetwork": "rakuten",
+    "commissionRate": 6,
+    "supportsRegistry": false
+  }
+}
