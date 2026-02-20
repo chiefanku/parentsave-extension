@@ -3,6 +3,7 @@
   "name": "ParentSave - Family Savings",
   "version": "1.0.0",
   "description": "Smart coupons, price tracking, and safety alerts for parents",
+  "default_locale": "en",
   "permissions": [
     "storage",
     "tabs",
