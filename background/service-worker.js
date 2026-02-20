@@ -34,6 +34,9 @@ chrome.runtime.onInstalled.addListener(async (details) => {
   // Set up alarms for periodic tasks
   await setupAlarms();
 
+  // Seed recall cache immediately so warnings work right away
+  await handleRecallUpdate();
+
   // Show welcome notification on fresh install
   if (details.reason === 'install') {
     chrome.notifications.create('welcome', {
