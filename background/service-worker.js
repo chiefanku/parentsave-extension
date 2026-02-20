@@ -8,6 +8,7 @@
 import { StorageManager } from '../lib/storage.js';
 import { RecallChecker } from '../lib/recalls.js';
 import { RegistryTracker } from '../lib/registry-tracker.js';
+import { CouponEngine } from '../lib/coupons.js';
 
 // Constants
 const ALARM_NAMES = {
@@ -153,14 +154,18 @@ async function handleMessage(message, sender) {
       const recall = await recallChecker.checkProduct(message.productInfo);
       return { success: true, data: recall };
 
-    case 'GET_COUPONS':
-      // Forward to coupon service
-      return { success: true, data: [] }; // Placeholder
+    case 'GET_COUPONS': {
+      const engine = new CouponEngine();
+      const coupons = await engine.findCoupons({ id: message.retailerId });
+      return { success: true, data: coupons };
+    }
 
-    case 'TRACK_REGISTRY_ITEM':
+    case 'TRACK_REGISTRY_ITEM': {
       const tracker = new RegistryTracker();
+      await tracker.loadTrackedItems(); // Must load existing items before adding
       await tracker.addTrackedItem(message.item);
       return { success: true };
+    }
 
     case 'GET_TRACKED_ITEMS':
       const registryTracker = new RegistryTracker();
@@ -174,9 +179,11 @@ async function handleMessage(message, sender) {
       await storage.saveSettings(message.settings);
       return { success: true };
 
-    case 'GET_SIZE_RECOMMENDATION':
-      // Forward to content script or calculate here
+    case 'GET_SIZE_RECOMMENDATION': {
+      // Size calculation is handled inline by the content script
+      // This is a no-op passthrough for future server-side recommendations
       return { success: true, data: null };
+    }
 
     default:
       console.warn('Unknown message type:', message.type);

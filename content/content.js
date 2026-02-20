@@ -399,32 +399,77 @@ class ParentSaveContent {
   }
 
   /**
-   * Handle registry page
+   * Handle registry page — parse items from DOM and track via background
    */
   async handleRegistryPage() {
-    // Add import button for registry tracking
     const importButton = document.createElement('button');
     importButton.className = 'parentsave-import-btn';
     importButton.textContent = 'Track with ParentSave';
 
     importButton.addEventListener('click', async () => {
-      const response = await this.sendMessage({
-        type: 'IMPORT_REGISTRY',
-        platform: this.retailer?.id,
-      });
+      const items = this.extractRegistryItems();
+      if (items.length === 0) {
+        this.showNotification('No registry items found on this page', 'error');
+        return;
+      }
 
-      if (response?.success) {
-        this.showNotification(`Tracking ${response.count} items!`, 'success');
+      let tracked = 0;
+      for (const item of items) {
+        try {
+          const response = await this.sendMessage({ type: 'TRACK_REGISTRY_ITEM', item });
+          if (response?.success) tracked++;
+        } catch (err) {
+          console.error('ParentSave: error tracking item', err);
+        }
+      }
+
+      if (tracked > 0) {
+        this.showNotification(`Tracking ${tracked} item${tracked !== 1 ? 's' : ''}!`, 'success');
       } else {
-        this.showNotification('Could not import registry', 'error');
+        this.showNotification('Could not track registry items', 'error');
       }
     });
 
-    // Find a good place to insert the button
     const header = document.querySelector('header, .registry-header, h1');
     if (header) {
       header.parentElement?.insertBefore(importButton, header.nextSibling);
     }
+  }
+
+  /**
+   * Extract registry items from the current page DOM
+   */
+  extractRegistryItems() {
+    const items = [];
+    const candidates = document.querySelectorAll(
+      '[data-item-id], .registry-item, [data-test="registry-item"], .a-list-item'
+    );
+
+    candidates.forEach((el) => {
+      const titleEl = el.querySelector(
+        this.retailer?.selectors?.productTitle ||
+          '[data-item-name], .a-text-normal, .item-title, h3, [data-test="product-title"]'
+      );
+      const title = titleEl?.textContent?.trim();
+      if (!title) return;
+
+      const priceEl = el.querySelector(
+        this.retailer?.selectors?.price ||
+          '.a-price .a-offscreen, .a-price-whole, .item-price, [data-test="product-price"]'
+      );
+      const linkEl = el.querySelector('a[href]');
+
+      items.push({
+        id: el.dataset?.itemId || `${Date.now()}-${Math.random().toString(36).substring(2, 7)}`,
+        title,
+        price: this.parsePrice(priceEl?.textContent),
+        url: linkEl?.href || window.location.href,
+        platform: this.retailer?.id || 'unknown',
+        imageUrl: el.querySelector('img')?.src || null,
+      });
+    });
+
+    return items;
   }
 
   /**
@@ -466,7 +511,7 @@ class ParentSaveContent {
 
   isCheckoutPage() {
     const url = window.location.href.toLowerCase();
-    const patterns = ['/checkout', '/cart', '/basket', '/order'];
+    const patterns = ['/checkout', '/cart', '/basket', '/order-summary', '/order-confirmation'];
     return patterns.some((p) => url.includes(p));
   }
 
@@ -536,8 +581,14 @@ class ParentSaveContent {
    * Send message to background script
    */
   sendMessage(message) {
-    return new Promise((resolve) => {
-      chrome.runtime.sendMessage(message, resolve);
+    return new Promise((resolve, reject) => {
+      chrome.runtime.sendMessage(message, (response) => {
+        if (chrome.runtime.lastError) {
+          reject(new Error(chrome.runtime.lastError.message));
+        } else {
+          resolve(response);
+        }
+      });
     });
   }
 
